@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CineVault – Discover Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="logo">Cine<span>Vault</span></h1>
+    <input id="search" type="search" placeholder="Search movies..." autocomplete="off" />
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-mode="trending">Trending</button>
+    <button class="tab" data-mode="popular">Popular</button>
+    <button class="tab" data-mode="top_rated">Top Rated</button>
+    <button class="tab" data-mode="upcoming">Upcoming</button>
+  </nav>
+
+  <main>
+    <h2 id="heading">Trending This Week</h2>
+    <div id="grid" class="grid"></div>
+    <p id="status" class="status"></p>
+    <button id="more" class="more" hidden>Load more</button>
+  </main>
+
+  <!-- Details modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <button id="close" class="close" aria-label="Close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>Data from <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
